@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+#root {
+  @apply mx-0 my-0;
+}
+
+.header-con {
+  @apply flex flex-row items-center grow  bg-pink-100 shadow-2xl fixed top-0 left-0 right-0 z-50;
+}
+
+.header-left-logo {
+  @apply w-10 lg:w-15;
+}
+
+.header-right-img {
+  @apply w-5 lg:w-6;
+
+}
+
+.header-left-con {
+  @apply flex items-center gap-1 px-4 py-3 cursor-pointer active:opacity-50;
+  @apply flex lg:mx-20;
+}
+
+.header-left-title {
+  @apply text-lg font-semibold text-pink-400 italic lg:text-2xl;
+}
+
+.header-right-con {
+  @apply bg-pink-400 rounded-md cursor-pointer hover:bg-pink-400 flex items-center gap-1 text-white;
+  @apply py-1 px-1 mx-10 shadow-2xl text-sm active:opacity-50 italic;
+  @apply lg:py-2 lg:px-3 lg:mx-20;
+}
+
+.header-right-login {
+  @apply lg:text-sm
+}
+
+.header-middle-con {
+  @apply hidden md:block md:w-95 lg:w-160;
+}
