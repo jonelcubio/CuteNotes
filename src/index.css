@@ -1,11 +1,16 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
 
 #root {
-  @apply mx-0 my-0;
+  @apply mx-0 my-0 bg-amber-50;
+}
+
+body, button, input, textarea, select {
+  font-family: 'Delius', cursive;
 }
 
 .header-con {
-  @apply flex flex-row items-center grow  bg-pink-100 shadow-2xl fixed top-0 left-0 right-0 z-50;
+  @apply flex flex-row items-center grow shrink bg-pink-100 shadow-2xl fixed top-0 left-0 right-0 z-50 gap-3.5;
 }
 
 .header-left-logo {
@@ -38,4 +43,17 @@
 
 .header-middle-con {
   @apply hidden md:block md:w-95 lg:w-160;
+}
+
+.hero-main-con {
+  @apply bg-amber-50 h-screen w-screen;
+}
+
+.hero-landing {
+  @apply  pt-50 text-4xl md:text-4xl lg:text-5xl font-bold text-center italic text-black;
+}
+
+.hero-landing-span {
+  @apply text-pink-400 border-b-2 border-dotted;
+  @apply hover:text-pink-900 cursor-pointer active:opacity-50;
 }
