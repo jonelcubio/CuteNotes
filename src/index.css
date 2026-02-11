@@ -2,7 +2,6 @@
 
 @plugin "tailwindcss-animate";
 @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -28,8 +27,8 @@ body, button, input, textarea, select {
 }
 
 .header-left-con {
-  @apply flex items-center gap-1 px-4 py-3 cursor-pointer active:opacity-50;
-  @apply flex lg:mx-20;
+  @apply flex items-center gap-1 px-5 lg:px-4 py-3 cursor-pointer active:opacity-50;
+  @apply lg:mx-20;
 }
 
 .header-left-title {
@@ -38,7 +37,7 @@ body, button, input, textarea, select {
 
 .header-right-con {
   @apply bg-pink-400 rounded-md cursor-pointer hover:bg-pink-400 flex items-center gap-1 text-white;
-  @apply py-1 px-1 mx-10 shadow-2xl text-sm active:opacity-50 italic;
+  @apply py-1 px-1 mx-9 shadow-2xl text-sm active:opacity-50 italic;
   @apply lg:py-2 lg:px-3 lg:mx-20;
 }
 
@@ -47,7 +46,7 @@ body, button, input, textarea, select {
 }
 
 .header-middle-con {
-  @apply hidden md:block md:w-95 lg:w-160;
+  @apply hidden md:block md:w-90 lg:w-170;
 }
 
 .hero-main-con {
@@ -55,7 +54,7 @@ body, button, input, textarea, select {
 }
 
 .hero-landing {
-  @apply  pt-50 text-4xl md:text-4xl lg:text-5xl font-bold text-center italic text-black;
+  @apply  pt-50 px-2.5 text-4xl md:text-4xl lg:text-5xl font-bold text-center italic text-black;
 }
 
 .hero-landing-span {
@@ -188,4 +187,12 @@ body, button, input, textarea, select {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.header-btn-con {
+  @apply flex items-center justify-center gap-2 px-6 py-2 rounded-full bg-purple-400 text-white active:opacity-50 w-70 mt-2.5; 
+}
+
+.header-btn-btn {
+  @apply flex items-center justify-center cursor-pointer;
 }
