@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
-@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -10,7 +10,7 @@
 }
 
 body, button, input, textarea, select {
-  font-family: 'Delius', cursive;
+  font-family: 'Architects Daughter', cursive;
 }
 
 .header-con {
@@ -195,4 +195,12 @@ body, button, input, textarea, select {
 
 .header-btn-btn {
   @apply flex items-center justify-center cursor-pointer;
+}
+
+.notes-con {
+  @apply flex flex-col items-center justify-center gap-2 px-6 py-2 rounded-lg bg-purple-400 text-white active:opacity-50 w-70 mt-2.5; 
+}
+
+.author-post {
+  @apply flex flex-row items-center gap-2;
 }
