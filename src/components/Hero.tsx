@@ -1,6 +1,10 @@
+import { useState } from "react";
 import lock from "../assets/lock.svg";
 import Notes from "./Notes";
+import LoginModal from "./LoginModal";
 export default function Hero(){
+
+  const [isModalOpen, setisModelOpen] = useState<boolean>(false);
   return(
     <>
     <div className="hero-main-con">
@@ -12,9 +16,11 @@ export default function Hero(){
      <div className="header-btn-btn">
         <div className="header-btn-con">
           <img src={lock} alt="Login to Post a Note" className="header-btn-img" />
-          <div className="header-btn-text">Login to Post a Note</div>
+          <div className="header-btn-text" onClick={() => setisModelOpen(true)}>Login to Post a Note</div>
         </div>
      </div>
+
+      <LoginModal isOpen={isModalOpen} onClose={() => setisModelOpen(false)} />
     
       <Notes />
      

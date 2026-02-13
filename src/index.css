@@ -217,3 +217,30 @@ body, button, input, textarea, select, div {
   @apply pt-5 text-2xl font-bold wrap-break-word italic;
 }
 
+.loginModal-con-main {
+  @apply fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-50 backdrop-blur-2xl flex-row text-center;
+}
+
+.modal-content {
+  @apply bg-white p-6 rounded-lg shadow-lg max-w-md w-full;
+}
+
+.modal-title {
+  @apply text-2xl font-bold mb-4 text-pink-400;
+}
+
+.input-icons {
+  @apply flex items-center gap-2 justify-center
+}
+
+.input-con {
+  @apply flex flex-col gap-2 mb-4;
+}
+
+.input-img {
+  @apply w-7;
+}
+
+.close-btn {
+  @apply mt-5 bg-pink-400 text-white py-2 px-3 rounded-lg hover:bg-pink-500 active:opacity-50 cursor-pointer;
+}
