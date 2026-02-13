@@ -6,11 +6,11 @@
 @custom-variant dark (&:is(.dark *));
 
 #root {
-  @apply mx-0 my-0 bg-amber-50;
+  @apply mx-0 my-0 bg-amber-50 overflow-x-hidden;
 }
 
-body, button, input, textarea, select {
-  font-family: 'Architects Daughter', cursive;
+body, button, input, textarea, select, div {
+  font-family: 'Architects Daughter', ui-rounded;
 }
 
 .header-con {
@@ -50,7 +50,7 @@ body, button, input, textarea, select {
 }
 
 .hero-main-con {
-  @apply bg-amber-50 h-screen w-screen;
+  @apply bg-amber-50 h-screen w-screen mb-10;
 }
 
 .hero-landing {
@@ -198,9 +198,22 @@ body, button, input, textarea, select {
 }
 
 .notes-con {
-  @apply flex flex-col items-center justify-center gap-2 px-6 py-2 rounded-lg bg-purple-400 text-white active:opacity-50 w-70 mt-2.5; 
+  @apply flex flex-col items-center justify-center gap-2 px-6 py-2 rounded-lg text-gray-900 active:opacity-50 w-70 cursor-pointer hover:opacity-90 hover:scale-105 shrink;
 }
 
 .author-post {
   @apply flex flex-row items-center gap-2;
 }
+
+.notes-con-div {
+  @apply flex flex-col lg:flex-row items-center justify-center gap-5 px-4 py-2 rounded-lg text-center mt-15;
+}
+
+.author-post-con {
+  @apply flex gap-10 pb-5 pt-5;
+}
+
+.notes-title {
+  @apply pt-5 text-2xl font-bold wrap-break-word italic;
+}
+
