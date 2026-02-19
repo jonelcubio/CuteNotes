@@ -1,3 +1,5 @@
+import { supabase } from "../supabaseClient";
+
 type LoginModalProps = {
   isOpen: boolean;
   onClose: () => void;
@@ -5,12 +7,25 @@ type LoginModalProps = {
 
 export default function LoginModal({isOpen, onClose}: LoginModalProps) {
     if (!isOpen) return null;
+    const handleGoogleLogin = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        // Ito ang babalikan ng browser pagkatapos mag-login
+        redirectTo: window.location.origin, 
+      }
+    });
+
+    if (error) {
+      console.error("Error logging in:", error.message);
+    }
+  };
   return(
     <>
      <div className="loginModal-con-main" onClick={onClose}>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-title">Sign in to CuteNotes</div>
-        <div className="input-con" onClick={() => alert("Redirecting to Google...")}>
+        <div className="input-con" onClick={handleGoogleLogin}>
           <div className="input-icons">
             <img src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg" 
             alt="Google logo"  className="input-img"/>
